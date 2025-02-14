@@ -11,12 +11,11 @@ app.use(cors());
 
 // Static ফোল্ডার সেট করা
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-app.use(express.static(path.join(__dirname, '../frontend')));
 
 // "/" রুটকে index.html এ রিডাইরেক্ট করো
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../frontend/index.html'));
+// });
 
 // Multer সেটআপ (ইমেজ আপলোডের জন্য)
 const storage = multer.diskStorage({
